@@ -1,8 +1,13 @@
 # Release
 
-## 1.0.0
+## 1.0.1
 
-Prvni samostatny release modulu AR Design Packeta Fix.
+Aktualni release modulu AR Design Packeta Fix.
+
+### Zmeny
+
+- Samostatne zobrazeni Packeta shipment detailu.
+- Spravne texty `PACKETA Shipment` a `Download PACKETA label`.
 
 ### Kontrola pred vydanim
 

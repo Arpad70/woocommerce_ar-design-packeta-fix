@@ -3,7 +3,7 @@
 /*
  * Plugin Name: AR Design Packeta Fix for WooCommerce
  * Description: Samostatný Packeta fix modul pre WooCommerce spravovaný Arpád Horák. Oddeľuje Packeta automatizáciu od AR Design DPD modulu.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Arpád Horák
  * Author URI: https://arpad-horak.cz
  * Update URI: https://github.com/Arpad70/woocommerce_ar-design-packeta-fix
@@ -29,7 +29,7 @@ define('AR_DESIGN_PACKETA_FIX_PLUGIN_PATH', plugin_dir_path(__FILE__));
 define('AR_DESIGN_PACKETA_FIX_PLUGIN_DIR', $plugin_dir);
 define('AR_DESIGN_PACKETA_FIX_PLUGIN_INDEX', __FILE__);
 define('AR_DESIGN_PACKETA_FIX_PLUGIN_WC_MIN_VERSION', '7.0');
-define('AR_DESIGN_PACKETA_FIX_VERSION', '1.0.0');
+define('AR_DESIGN_PACKETA_FIX_VERSION', '1.0.1');
 define('AR_DESIGN_PACKETA_FIX_BASENAME', plugin_basename(__FILE__));
 define('AR_DESIGN_PACKETA_FIX_REPOSITORY', 'Arpad70/woocommerce_ar-design-packeta-fix');
 define('AR_DESIGN_PACKETA_FIX_TEXT_DOMAIN', 'ar-design-packeta-fix');
@@ -59,6 +59,7 @@ add_action('plugins_loaded', function () {
     require_once AR_DESIGN_PACKETA_FIX_PLUGIN_PATH . 'includes/Settings.php';
     require_once AR_DESIGN_PACKETA_FIX_PLUGIN_PATH . 'includes/Shipment.php';
     require_once AR_DESIGN_PACKETA_FIX_PLUGIN_PATH . 'includes/Tracking.php';
+    require_once AR_DESIGN_PACKETA_FIX_PLUGIN_PATH . 'includes/TrackingDisplay.php';
     require_once AR_DESIGN_PACKETA_FIX_PLUGIN_PATH . 'includes/Automation.php';
     require_once AR_DESIGN_PACKETA_FIX_PLUGIN_PATH . 'includes/PacketaBridge.php';
     require_once AR_DESIGN_PACKETA_FIX_PLUGIN_PATH . 'includes/PacketaExporter.php';
@@ -81,6 +82,7 @@ add_action('plugins_loaded', function () {
     Automation::init();
     PacketaBridge::init();
     PacketaExporter::init();
+    TrackingDisplay::init();
 });
 
 $ar_design_packeta_fix_updater = new ArDesignPacketaFixUpdater(

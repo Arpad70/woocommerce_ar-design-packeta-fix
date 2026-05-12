@@ -344,6 +344,7 @@ class PacketaExporter
         }
 
         $order->add_order_note(sprintf(
+            /* translators: %s: Packeta packet barcode. */
             __('Packeta label for packet %s was generated and saved for download.', 'ar-design-packeta-fix'),
             self::buildPacketBarcode((string) $packetaOrder->getPacketId())
         ));
@@ -504,6 +505,7 @@ class PacketaExporter
             $shippingLabel = self::getPacketaPickupLabel($order);
             $messages[0] = $shippingLabel !== ''
                 ? sprintf(
+                    /* translators: %s: human-readable pickup point label stored in the order. */
                     __('Pickup point or carrier id is not set. The order only contains the pickup-point label "%s" without the technical Packeta point ID.', 'ar-design-packeta-fix'),
                     $shippingLabel
                 )
@@ -552,6 +554,7 @@ class PacketaExporter
         ]);
 
         $order->add_order_note(sprintf(
+            /* translators: %s: Packeta export error message. */
             __('Packeta automatic export failed: %s', 'ar-design-packeta-fix'),
             $message
         ));

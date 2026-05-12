@@ -1,0 +1,187 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: AR Design Packeta Fix for WooCommerce 1.0.1\n"
+"Language: sk_SK\n"
+"Language-Team: Slovenčina\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=( n == 1 ) ? 0 : ( n >= 2 && n <= 4 ) ? 1 : 2;\n"
+"X-Domain: ar-design-packeta-fix\n"
+
+msgid "Accepted at depot"
+msgstr "Prijaté na depe"
+
+msgid "AR Design Packeta Fix"
+msgstr "AR Design Packeta Fix"
+
+msgid "AR Design Packeta Fix for WooCommerce"
+msgstr "AR Design Packeta Fix for WooCommerce"
+
+msgid "AR Design Packeta Fix requires WooCommerce version %s or higher."
+msgstr "AR Design Packeta Fix vyžaduje WooCommerce vo verzii %s alebo vyššej."
+
+msgid "Arpád Horák"
+msgstr "Arpád Horák"
+
+msgid "Automation bridge for the Packeta WooCommerce plugin."
+msgstr "Automatizačný mostík pre Packeta plugin pre WooCommerce."
+
+msgid "Complete order after delivery"
+msgstr "Dokončiť objednávku po doručení"
+
+msgid "Current status"
+msgstr "Aktuálny stav"
+
+msgid "Customs declaration process"
+msgstr "Proces colného vyhlásenia"
+
+msgid "Departed from depot"
+msgstr "Odoslané z depa"
+
+msgid "Download %s label"
+msgstr "Stiahnuť štítok %s"
+
+msgid "Enable Packeta automation"
+msgstr "Povoliť Packeta automatizáciu"
+
+msgid "Handed over to carrier company"
+msgstr "Odovzdané prepravnej spoločnosti"
+
+msgid "Changelog nie je dostupný."
+msgstr "Changelog nie je dostupný."
+
+msgid "Invoice was prepared for cash on delivery follow-up email."
+msgstr "Faktúra bola pripravená pre následný e-mail pri dobierke."
+
+msgid "Last sync"
+msgstr "Posledná synchronizácia"
+
+msgid "Last tracking error"
+msgstr "Posledná chyba sledovania"
+
+msgid "Location"
+msgstr "Miesto"
+
+msgid "On the way"
+msgstr "Na ceste"
+
+msgid "Packeta accepted the parcel at the depot."
+msgstr "Packeta prijala zásielku na depe."
+
+msgid "Packeta automatic export failed: %s"
+msgstr "Automatický export Packety zlyhal: %s"
+
+msgid "Packeta confirmed successful delivery."
+msgstr "Packeta potvrdila úspešné doručenie."
+
+msgid "Packeta delivery status confirmed successful delivery."
+msgstr "Stav Packety potvrdil úspešné doručenie."
+
+msgid "Packeta Fix"
+msgstr "Packeta Fix"
+
+msgid "Packeta label for packet %s was generated and saved for download."
+msgstr "Packeta štítok pre zásielku %s bol vygenerovaný a uložený na stiahnutie."
+
+msgid "Packeta order row is missing or invalid."
+msgstr "Riadok objednávky Packety chýba alebo je neplatný."
+
+msgid "Packeta repository service is not available."
+msgstr "Služba repozitára Packety nie je dostupná."
+
+msgid "Packeta services are not available for automatic export."
+msgstr "Služby Packety nie sú dostupné pre automatický export."
+
+msgid "Packeta shipment submission failed."
+msgstr "Odoslanie zásielky do Packety zlyhalo."
+
+msgid "Packeta tracking update: %1$s%2$s"
+msgstr "Aktualizácia sledovania Packety: %1$s%2$s"
+
+msgid "Parcel has been collected"
+msgstr "Zásielka bola prevzatá"
+
+msgid "Ready for pick-up"
+msgstr "Pripravené na vyzdvihnutie"
+
+msgid "Ready for pick-up until %s."
+msgstr "Pripravené na vyzdvihnutie do %s."
+
+msgid "Rejected by recipient"
+msgstr "Odmietnuté príjemcom"
+
+msgid "Return in transit"
+msgstr "Vratka v preprave"
+
+msgid "Samostatný Packeta fix modul pre WooCommerce spravovaný AR Design."
+msgstr "Samostatný Packeta fix modul pre WooCommerce spravovaný AR Design."
+
+msgid "Shipment cancelled"
+msgstr "Zásielka zrušená"
+
+msgid "Shipment delivered"
+msgstr "Zásielka doručená"
+
+msgid "Shipment exported to Packeta"
+msgstr "Zásielka exportovaná do Packety"
+
+msgid "Shipment returned"
+msgstr "Zásielka vrátená"
+
+msgid "%s Shipment"
+msgstr "Zásielka %s"
+
+msgid "Status date"
+msgstr "Dátum stavu"
+
+msgid "Synchronize Packeta shipments and delivery workflow automatically."
+msgstr "Automaticky synchronizovať Packeta zásielky a workflow doručenia."
+
+msgid "The parcel departed from the depot."
+msgstr "Zásielka odišla z depa."
+
+msgid "The parcel has been collected."
+msgstr "Zásielka bola prevzatá."
+
+msgid "The parcel is in customs declaration process."
+msgstr "Zásielka je v procese colného vyhlásenia."
+
+msgid "The parcel is on the way back to the sender."
+msgstr "Zásielka je na ceste späť k odosielateľovi."
+
+msgid "The parcel is on the way to the destination."
+msgstr "Zásielka je na ceste do cieľa."
+
+msgid "The parcel is ready for pick-up."
+msgstr "Zásielka je pripravená na vyzdvihnutie."
+
+msgid "The parcel was cancelled in Packeta."
+msgstr "Zásielka bola v Packete zrušená."
+
+msgid "The parcel was handed over to the carrier company."
+msgstr "Zásielka bola odovzdaná prepravnej spoločnosti."
+
+msgid "The parcel was rejected by the recipient."
+msgstr "Zásielka bola odmietnutá príjemcom."
+
+msgid "The parcel was returned to the sender."
+msgstr "Zásielka bola vrátená odosielateľovi."
+
+msgid "There was an unsuccessful delivery attempt."
+msgstr "Došlo k neúspešnému pokusu o doručenie."
+
+msgid "The shipment data was handed over to Packeta."
+msgstr "Údaje zásielky boli odovzdané Packete."
+
+msgid "The shipment data was handed over to Packeta and is awaiting pickup."
+msgstr "Údaje zásielky boli odovzdané Packete a čakajú na prevzatie."
+
+msgid "Tracking"
+msgstr "Sledovanie"
+
+msgid "Unsuccessful delivery attempt"
+msgstr "Neúspešný pokus o doručenie"
+
+msgid "https://arpad-horak.cz"
+msgstr "https://arpad-horak.cz"

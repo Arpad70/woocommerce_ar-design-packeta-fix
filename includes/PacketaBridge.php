@@ -41,16 +41,12 @@ class PacketaBridge
         }
     }
 
-    public static function primeAdminOrderShipment($order): void
+    public static function primeAdminOrderShipment(WC_Order $order): void
     {
-        if (!$order instanceof WC_Order) {
-            return;
-        }
-
         self::syncOrderShipment($order);
     }
 
-    public static function syncShipmentByOrderId($orderId): void
+    public static function syncShipmentByOrderId(int $orderId): void
     {
         $order = wc_get_order(absint($orderId));
 
@@ -248,6 +244,7 @@ class PacketaBridge
 
         if ($previousStatus !== '' && $currentStatus !== '' && $currentStatus !== $previousStatus) {
             $order->add_order_note(sprintf(
+                /* translators: 1: current tracking status label, 2: optional location in parentheses. */
                 __('Packeta tracking update: %1$s%2$s', 'ar-design-packeta-fix'),
                 $currentLabel ?: $currentStatus,
                 $currentLocation ? ' (' . $currentLocation . ')' : ''
@@ -346,7 +343,11 @@ class PacketaBridge
                 'status' => 'ready_for_pickup',
                 'label' => __('Ready for pick-up', 'ar-design-packeta-fix'),
                 'description' => $storedUntil !== ''
-                    ? sprintf(__('Ready for pick-up until %s.', 'ar-design-packeta-fix'), $storedUntil)
+                    ? sprintf(
+                        /* translators: %s: pickup deadline date. */
+                        __('Ready for pick-up until %s.', 'ar-design-packeta-fix'),
+                        $storedUntil
+                    )
                     : __('The parcel is ready for pick-up.', 'ar-design-packeta-fix'),
             ],
             'handed to carrier' => [

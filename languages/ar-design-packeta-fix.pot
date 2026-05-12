@@ -1,0 +1,300 @@
+# Copyright (C) 2026 Arpád Horák
+# This file is distributed under the GPLv2.
+msgid ""
+msgstr ""
+"Project-Id-Version: AR Design Packeta Fix for WooCommerce 1.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ar-design-packeta-fix\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-05-12T08:42:07+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: ar-design-packeta-fix\n"
+
+#. Plugin Name of the plugin
+#: ar-design-packeta-fix.php
+msgid "AR Design Packeta Fix for WooCommerce"
+msgstr ""
+
+#. Description of the plugin
+#: ar-design-packeta-fix.php
+msgid "Samostatný Packeta fix modul pre WooCommerce spravovaný Arpád Horák. Oddeľuje Packeta automatizáciu od AR Design DPD modulu."
+msgstr ""
+
+#. Author of the plugin
+#: ar-design-packeta-fix.php
+msgid "Arpád Horák"
+msgstr ""
+
+#. Author URI of the plugin
+#: ar-design-packeta-fix.php
+msgid "https://arpad-horak.cz"
+msgstr ""
+
+#. translators: %s: minimum required WooCommerce version.
+#: ar-design-packeta-fix.php:54
+#, php-format
+msgid "AR Design Packeta Fix requires WooCommerce version %s or higher."
+msgstr ""
+
+#: includes/Automation.php:32
+#: includes/Automation.php:34
+msgid "Packeta delivery status confirmed successful delivery."
+msgstr ""
+
+#: includes/Automation.php:42
+msgid "Invoice was prepared for cash on delivery follow-up email."
+msgstr ""
+
+#. translators: 1: current tracking status label, 2: optional location in parentheses.
+#: includes/PacketaBridge.php:252
+#, php-format
+msgid "Packeta tracking update: %1$s%2$s"
+msgstr ""
+
+#: includes/PacketaBridge.php:328
+#: includes/PacketaBridge.php:411
+msgid "Shipment exported to Packeta"
+msgstr ""
+
+#: includes/PacketaBridge.php:329
+msgid "The shipment data was handed over to Packeta and is awaiting pickup."
+msgstr ""
+
+#: includes/PacketaBridge.php:333
+msgid "Accepted at depot"
+msgstr ""
+
+#: includes/PacketaBridge.php:334
+msgid "Packeta accepted the parcel at the depot."
+msgstr ""
+
+#: includes/PacketaBridge.php:338
+msgid "On the way"
+msgstr ""
+
+#: includes/PacketaBridge.php:339
+msgid "The parcel is on the way to the destination."
+msgstr ""
+
+#: includes/PacketaBridge.php:343
+msgid "Departed from depot"
+msgstr ""
+
+#: includes/PacketaBridge.php:344
+msgid "The parcel departed from the depot."
+msgstr ""
+
+#: includes/PacketaBridge.php:348
+msgid "Ready for pick-up"
+msgstr ""
+
+#. translators: %s: pickup deadline date.
+#: includes/PacketaBridge.php:352
+#, php-format
+msgid "Ready for pick-up until %s."
+msgstr ""
+
+#: includes/PacketaBridge.php:355
+msgid "The parcel is ready for pick-up."
+msgstr ""
+
+#: includes/PacketaBridge.php:359
+msgid "Handed over to carrier company"
+msgstr ""
+
+#: includes/PacketaBridge.php:360
+msgid "The parcel was handed over to the carrier company."
+msgstr ""
+
+#: includes/PacketaBridge.php:364
+#: includes/Shipment.php:70
+msgid "Shipment delivered"
+msgstr ""
+
+#: includes/PacketaBridge.php:365
+msgid "Packeta confirmed successful delivery."
+msgstr ""
+
+#: includes/PacketaBridge.php:369
+msgid "Return in transit"
+msgstr ""
+
+#: includes/PacketaBridge.php:370
+msgid "The parcel is on the way back to the sender."
+msgstr ""
+
+#: includes/PacketaBridge.php:374
+msgid "Shipment returned"
+msgstr ""
+
+#: includes/PacketaBridge.php:375
+msgid "The parcel was returned to the sender."
+msgstr ""
+
+#: includes/PacketaBridge.php:379
+msgid "Shipment cancelled"
+msgstr ""
+
+#: includes/PacketaBridge.php:380
+msgid "The parcel was cancelled in Packeta."
+msgstr ""
+
+#: includes/PacketaBridge.php:384
+msgid "Parcel has been collected"
+msgstr ""
+
+#: includes/PacketaBridge.php:385
+msgid "The parcel has been collected."
+msgstr ""
+
+#: includes/PacketaBridge.php:389
+msgid "Customs declaration process"
+msgstr ""
+
+#: includes/PacketaBridge.php:390
+msgid "The parcel is in customs declaration process."
+msgstr ""
+
+#: includes/PacketaBridge.php:394
+msgid "Unsuccessful delivery attempt"
+msgstr ""
+
+#: includes/PacketaBridge.php:395
+msgid "There was an unsuccessful delivery attempt."
+msgstr ""
+
+#: includes/PacketaBridge.php:399
+msgid "Rejected by recipient"
+msgstr ""
+
+#: includes/PacketaBridge.php:400
+msgid "The parcel was rejected by the recipient."
+msgstr ""
+
+#: includes/PacketaBridge.php:412
+msgid "The shipment data was handed over to Packeta."
+msgstr ""
+
+#: includes/PacketaExporter.php:83
+msgid "Packeta services are not available for automatic export."
+msgstr ""
+
+#: includes/PacketaExporter.php:92
+msgid "Packeta order row is missing or invalid, so automatic export could not start."
+msgstr ""
+
+#: includes/PacketaExporter.php:126
+msgid "Packeta shipment submission failed."
+msgstr ""
+
+#: includes/PacketaExporter.php:176
+msgid "Packeta repository service is not available."
+msgstr ""
+
+#: includes/PacketaExporter.php:183
+msgid "Packeta order row is missing or invalid."
+msgstr ""
+
+#. translators: %s: Packeta packet barcode.
+#: includes/PacketaExporter.php:348
+#, php-format
+msgid "Packeta label for packet %s was generated and saved for download."
+msgstr ""
+
+#. translators: %s: human-readable pickup point label stored in the order.
+#: includes/PacketaExporter.php:509
+#, php-format
+msgid "Pickup point or carrier id is not set. The order only contains the pickup-point label \"%s\" without the technical Packeta point ID."
+msgstr ""
+
+#: includes/PacketaExporter.php:512
+msgid "Pickup point or carrier id is not set. The order is missing the technical Packeta pickup point ID required for export."
+msgstr ""
+
+#. translators: %s: Packeta export error message.
+#: includes/PacketaExporter.php:558
+#, php-format
+msgid "Packeta automatic export failed: %s"
+msgstr ""
+
+#: includes/Settings.php:23
+#: includes/Settings.php:25
+#: includes/Settings.php:72
+msgid "AR Design Packeta Fix"
+msgstr ""
+
+#: includes/Settings.php:24
+msgid "Automation bridge for the Packeta WooCommerce plugin."
+msgstr ""
+
+#: includes/Settings.php:36
+msgid "Enable Packeta automation"
+msgstr ""
+
+#: includes/Settings.php:38
+msgid "Synchronize Packeta shipments and delivery workflow automatically."
+msgstr ""
+
+#: includes/Settings.php:42
+msgid "Complete order after delivery"
+msgstr ""
+
+#: includes/Settings.php:44
+msgid "Change WooCommerce order status to completed when Packeta confirms delivery."
+msgstr ""
+
+#: includes/Settings.php:52
+msgid "Packeta Fix"
+msgstr ""
+
+#: includes/Settings.php:74
+msgid "Runs Packeta export, tracking synchronization and delivered-order automation independently from the DPD module."
+msgstr ""
+
+#. translators: %s: carrier label shown in the shipment summary, for example Packeta.
+#: includes/TrackingDisplay.php:157
+#, php-format
+msgid "%s Shipment"
+msgstr ""
+
+#. translators: %s: carrier label shown in the shipment summary, for example Packeta.
+#: includes/TrackingDisplay.php:165
+#, php-format
+msgid "Download %s label"
+msgstr ""
+
+#: includes/TrackingDisplay.php:173
+msgid "Tracking"
+msgstr ""
+
+#: includes/TrackingDisplay.php:184
+msgid "Current status"
+msgstr ""
+
+#: includes/TrackingDisplay.php:193
+msgid "Status date"
+msgstr ""
+
+#: includes/TrackingDisplay.php:197
+msgid "Location"
+msgstr ""
+
+#: includes/TrackingDisplay.php:201
+msgid "Last sync"
+msgstr ""
+
+#: includes/TrackingDisplay.php:205
+msgid "Last tracking error"
+msgstr ""
+
+#: includes/Updater.php:92
+msgid "Samostatný Packeta fix modul pre WooCommerce spravovaný AR Design."
+msgstr ""
+
+#: includes/Updater.php:93
+msgid "Changelog nie je dostupný."
+msgstr ""

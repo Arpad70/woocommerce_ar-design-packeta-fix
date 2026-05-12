@@ -152,11 +152,19 @@ class TrackingDisplay
         ?>
         <div class="ar-design-packeta-fix-shipment-summary" <?php echo $containerStyle; ?>>
             <p>
-                <strong><?php echo esc_html(sprintf(__('%s Shipment', 'ar-design-packeta-fix'), $view['carrier_label'])); ?></strong><br>
+                <strong><?php echo esc_html(sprintf(
+                    /* translators: %s: carrier label shown in the shipment summary, for example Packeta. */
+                    __('%s Shipment', 'ar-design-packeta-fix'),
+                    $view['carrier_label']
+                )); ?></strong><br>
 
                 <?php if ($view['label_url'] !== '') : ?>
                     <a class="button" href="<?php echo esc_url($view['label_url']); ?>" target="_blank" rel="noopener noreferrer" style="margin: 6px 0 8px;">
-                        <?php echo esc_html(sprintf(__('Download %s label', 'ar-design-packeta-fix'), $view['carrier_label'])); ?>
+                        <?php echo esc_html(sprintf(
+                            /* translators: %s: carrier label shown in the shipment summary, for example Packeta. */
+                            __('Download %s label', 'ar-design-packeta-fix'),
+                            $view['carrier_label']
+                        )); ?>
                     </a>
                     <br>
                 <?php endif; ?>

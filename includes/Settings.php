@@ -10,6 +10,9 @@ class Settings extends \WC_Shipping_Method
     public const SETTINGS_OPTION_KEY = 'woocommerce_ar_design_packeta_fix_settings';
     public const TRACKING_ENABLED_OPTION_KEY = 'packeta_tracking_enabled';
     public const AUTO_COMPLETE_ORDER_OPTION_KEY = 'packeta_tracking_auto_complete_order';
+    public const FUEL_SURCHARGE_PERCENT_OPTION_KEY = 'packeta_fuel_surcharge_percent';
+    public const TOLL_SURCHARGE_PERCENT_OPTION_KEY = 'packeta_toll_surcharge_percent';
+    public const TOLL_SURCHARGE_FIXED_OPTION_KEY = 'packeta_toll_surcharge_fixed';
 
     public static function init(): void
     {
@@ -44,7 +47,58 @@ class Settings extends \WC_Shipping_Method
                 'label' => __('Change WooCommerce order status to completed when Packeta confirms delivery.', 'ar-design-packeta-fix'),
                 'default' => 'yes',
             ],
+            self::FUEL_SURCHARGE_PERCENT_OPTION_KEY => [
+                'title' => __('Palivový príplatok (%)', 'ar-design-packeta-fix'),
+                'type' => 'text',
+                'desc' => __('Percentuálny palivový príplatok aplikovaný na Packeta sadzby dopravy (napr. 6.4).', 'ar-design-packeta-fix'),
+                'default' => '0',
+                'desc_tip' => false,
+                'placeholder' => '0',
+            ],
+            self::TOLL_SURCHARGE_PERCENT_OPTION_KEY => [
+                'title' => __('Mýtny príplatok (%)', 'ar-design-packeta-fix'),
+                'type' => 'text',
+                'desc' => __('Voliteľná percentuálna korekcia mýta. Oficiálny cenník Packeta používa primárne mýto ako EUR/kg.', 'ar-design-packeta-fix'),
+                'default' => '0',
+                'desc_tip' => false,
+                'placeholder' => '0',
+            ],
+            self::TOLL_SURCHARGE_FIXED_OPTION_KEY => [
+                'title' => __('Mýtny príplatok (EUR/kg)', 'ar-design-packeta-fix'),
+                'type' => 'text',
+                'desc' => __('Mýtny príplatok za každý začatý kilogram zásielky (napr. 0.04).', 'ar-design-packeta-fix'),
+                'default' => '0',
+                'desc_tip' => false,
+                'placeholder' => wc_format_localized_price(0),
+            ],
+            [
+                'type' => 'info',
+                'id' => self::SETTINGS_ID_KEY . '_surcharge_sync_info',
+                'title' => __('Kontrola cien z CRONu', 'ar-design-packeta-fix'),
+                'text' => \ArDesign\PacketaFix\SurchargeMonitor::getAdminStatusHtml(),
+                'is_option' => false,
+                'row_class' => 'ard-surcharge-sync-info',
+            ],
         ];
+
+        $this->form_fields = self::injectSurchargeHelpers($this->form_fields);
+    }
+
+    private static function injectSurchargeHelpers(array $fields): array
+    {
+        $helpers = \ArDesign\PacketaFix\SurchargeMonitor::getHelperTexts();
+
+        foreach ($helpers as $fieldKey => $helperText) {
+            if (!isset($fields[$fieldKey])) {
+                continue;
+            }
+
+            $baseDescription = (string) ($fields[$fieldKey]['desc'] ?? $fields[$fieldKey]['description'] ?? '');
+            $fields[$fieldKey]['desc'] = trim($baseDescription . ' ' . $helperText);
+            $fields[$fieldKey]['desc_tip'] = false;
+        }
+
+        return $fields;
     }
 
     public static function addShippingSection(array $sections): array
@@ -99,6 +153,9 @@ class Settings extends \WC_Shipping_Method
         return array_merge([
             self::TRACKING_ENABLED_OPTION_KEY => 'yes',
             self::AUTO_COMPLETE_ORDER_OPTION_KEY => 'yes',
+            self::FUEL_SURCHARGE_PERCENT_OPTION_KEY => '0',
+            self::TOLL_SURCHARGE_PERCENT_OPTION_KEY => '0',
+            self::TOLL_SURCHARGE_FIXED_OPTION_KEY => '0',
         ], $settings);
     }
 

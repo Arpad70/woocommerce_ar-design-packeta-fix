@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.3 - 2026-05-15
+
+- Pridane nastavenia a monitoring shipping surcharge pre Packeta workflow.
+- Release dorovnava lokalne zmeny s GitHub release stavom.
+
 ## 1.0.1
 
 - Pridano samostatne zobrazeni Packeta shipment detailu v administraci objednavky a detailu objednavky.
